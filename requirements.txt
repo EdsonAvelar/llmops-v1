@@ -1,2 +1,4 @@
+jupyter
+nbconvert
 transformers==4.47.0
 torch==2.5.1
