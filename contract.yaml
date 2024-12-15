@@ -1,0 +1,16 @@
+input_schema:
+  type: string
+  description: "Texto de entrada fornecido ao modelo"
+  constraints:
+    - context: "The sun is a star"
+
+output_schema:
+  type: string
+  description: "Texto gerado pelo modelo com base no prompt"
+  constraints:
+    - must_contain: ["star", "universe"]
+    - max_length: 500  # Limite de caracteres na resposta
+
+metrics:
+  - name: coherence
+    description: "Validação subjetiva de coesão entre contexto e resposta"
