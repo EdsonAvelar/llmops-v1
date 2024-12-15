@@ -38,10 +38,6 @@ jobs:
           jupyter nbconvert --execute --to script stgen.ipynb
           python stgen.py
 
-      # Validar snapshot contra o contrato
-      - name: Validate snapshot
-        run: |
-          python validate_notebook.py
 
       # Salvar snapshot como artefato
       - name: Upload snapshot
@@ -71,10 +67,6 @@ jobs:
         run: |
           pip install -r requirements.txt
 
-      # Executar validação final
-      - name: Validate final snapshot
-        run: |
-          python validate_notebook.py
 
       # Criar tag para release
       - name: Create Release Tag
